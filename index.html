@@ -7,14 +7,16 @@
 <html>
 <head>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #b357ff;
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
+      min-height: 100vh;
     }
     .container {
       width: 600px;
@@ -35,6 +37,8 @@
     .content {
       padding: 20px;
       color: #333333;
+      transform: scale(0.95); 
+      transition: transform 0.3s ease-in-out;
     }
     .content p {
       line-height: 1.6;
@@ -64,7 +68,36 @@
       justify-content: center;
       display: flex;
     }
-  </style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .container {
+        width: 90%; 
+        margin: 0 auto;
+      }
+      .header img {
+        max-width: 50px;
+      }
+      .content {
+        padding: 10px;
+        transform: scale(0.85); 
+      }
+      .footer {
+        font-size: 12px;
+        padding: 5px;
+      }
+      .footer img {
+        width: 15px;
+      }
+      .event img{
+        max-width: 100%;
+      }
+    }
+  </style>  
 </head>
 <body>
   <div class="container">
